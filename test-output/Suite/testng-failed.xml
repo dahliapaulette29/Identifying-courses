@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="utilities.extentReport"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="identifycourses.Enterprises">
+        <methods>
+          <include name="getDriver"/>
+          <include name="forEnterprises"/>
+          <include name="errorMessage"/>
+          <include name="dropDowns"/>
+          <include name="readyToTransform"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- identifycourses.Enterprises -->
+      <class name="identifycourses.Languagelearning">
+        <methods>
+          <include name="getDriver"/>
+          <include name="langCount"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- identifycourses.Languagelearning -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
