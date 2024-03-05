@@ -77,15 +77,17 @@ public class Coursera {
 		js1.executeScript("arguments[0].scrollIntoView();",driver.findElement(By.xpath("//*[contains(text(), 'Language')]")));
 		Thread.sleep(3000);
 		//show more
-		js1.executeScript("arguments[0].click();", driver.findElement(By.xpath("//*[@id='search-results-header-wrapper']/div/div[1]/div/div[3]/div[2]/button/span")));
+		js1.executeScript("arguments[0].click();", driver.findElement(By.xpath("//span[@class='cds-checkboxAndRadio-labelContent css-imksha']//*[contains(text(),'English')]")));
+		Thread.sleep(3000);
+		/*js1.executeScript("arguments[0].click();", driver.findElement(By.xpath("//*[@id='search-results-header-wrapper']/div/div[1]/div/div[3]/div[2]/button/span")));
 		Thread.sleep(3000);
 		js1.executeScript("arguments[0].click();",driver.findElement(By.xpath("//*[@placeholder='Search for Language']")));
 		driver.findElement(By.xpath("//*[@placeholder='Search for Language']")).sendKeys("English");
 		Thread.sleep(3000);
 		js1.executeScript("arguments[0].click();", driver.findElement(By.xpath("//*[@id=\"checkbox-group\"]/div/label/span")));
-		Thread.sleep(7000);
+		Thread.sleep(7000);*/
 		Screenshot.screen(driver, "selecting language");
-		web.apply();
+		//web.apply();
 		Thread.sleep(6000);
 		Screenshot.screen(driver, "courses");
 	}
@@ -189,7 +191,7 @@ public class Coursera {
 		ForLanguageLearning lang=new ForLanguageLearning(driver);
 		js.executeScript("arguments[0].scrollIntoView();",driver.findElement(By.xpath("//*[contains(text(), 'Language')]")));
 		Thread.sleep(4000);
-		js.executeScript("arguments[0].click();", driver.findElement(By.xpath("//*[@id='search-results-header-wrapper']/div/div[1]/div/div[3]/div[2]/button/span")));
+		js.executeScript("arguments[0].click();", driver.findElement(By.xpath("//*[@id='search-results-header-wrapper']/div/div[1]/div/div[2]/div[2]/button/span")));
 		Thread.sleep(4000);
 		List<WebElement>langlist=new ArrayList<WebElement>();
 	    langlist = driver.findElements(By.xpath("//div[@class=\"css-11krhap\"]/div[@id=\"checkbox-group\"]/div//div/span/span"));
